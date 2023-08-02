@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import AppLayout from '../layouts/AppLayout'
 
-function App() {
+export default function Index() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="max-w-screen-sm mx-auto px-6 py-4">
+    <AppLayout>
       <h1 className="text-3xl font-bold">Hello, World!</h1>
 
       <div className="mt-8">
@@ -16,11 +17,9 @@ function App() {
         </button>
 
         <span className="ml-4">
-          Count is {count}
+          Count is {count}.
         </span>
       </div>
-    </div>
+    </AppLayout>
   )
 }
-
-export default App
